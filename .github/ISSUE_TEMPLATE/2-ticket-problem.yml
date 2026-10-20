@@ -30,19 +30,8 @@ body:
       description: The test that shows the desired state is reached.
     validations:
       required: true
-  - type: dropdown
-    id: level
-    attributes:
-      label: Level
-      options:
-        - 5,000 miles · the whole project
-        - 500 miles · a milestone
-        - 50 miles · a step of a milestone
-        - 5 miles · one change
-    validations:
-      required: true
   - type: input
     id: part_of
     attributes:
       label: Part of
-      description: The bigger ticket it belongs under, as #number. Empty for a whole project.
+      description: The bigger ticket it belongs under, as #number. It goes under that ticket as a sub-issue.
