@@ -1,6 +1,7 @@
 name: Ticket · feature
 description: Something the product must do or have. Where it is now, where it must be, and how to tell it's reached.
 type: Feature
+labels: ["moirai"]   # the intake label (moirai.toml [github]): the issue becomes the same ticket on its project's Dart board
 body:
   - type: textarea
     id: now
