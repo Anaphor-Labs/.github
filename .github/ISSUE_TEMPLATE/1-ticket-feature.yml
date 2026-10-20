@@ -1,0 +1,48 @@
+name: Ticket · feature
+description: Something the product must do or have. Where it is now, where it must be, and how to tell it's reached.
+type: Feature
+body:
+  - type: textarea
+    id: now
+    attributes:
+      label: Where it is now
+      description: The current state, as it is today.
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong with it
+      description: Why the current state isn't good enough.
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Where it must be
+      description: The desired state.
+    validations:
+      required: true
+  - type: textarea
+    id: done_when
+    attributes:
+      label: Done when
+      description: The test that shows the desired state is reached.
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level
+      options:
+        - 5,000 miles · the whole project
+        - 500 miles · a milestone
+        - 50 miles · a step of a milestone
+        - 5 miles · one change
+    validations:
+      required: true
+  - type: input
+    id: part_of
+    attributes:
+      label: Part of
+      description: The bigger ticket it belongs under, as #number. Empty for a whole project.

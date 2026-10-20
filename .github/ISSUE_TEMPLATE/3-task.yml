@@ -1,0 +1,44 @@
+name: Task
+description: One change under a ticket. What it's for, the plan, and the tests that prove it.
+type: Task
+body:
+  - type: input
+    id: ticket
+    attributes:
+      label: Ticket
+      description: The ticket it works towards, as #number. It goes under that ticket as a sub-issue.
+    validations:
+      required: true
+  - type: textarea
+    id: what_for
+    attributes:
+      label: What it's for
+      description: What doing it changes, and why it's needed.
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan
+      description: How it gets to the desired state.
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Test
+      description: What proves this task works.
+    validations:
+      required: true
+  - type: textarea
+    id: end_to_end
+    attributes:
+      label: End-to-end test
+      description: What proves it works together with everything else.
+    validations:
+      required: true
+  - type: input
+    id: waits_on
+    attributes:
+      label: Waits on
+      description: Tasks that must be finished first, as #numbers.
