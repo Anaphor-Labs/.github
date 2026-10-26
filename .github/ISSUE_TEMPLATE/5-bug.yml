@@ -1,0 +1,33 @@
+name: Bug
+description: Something broken or wrong, under the item it breaks.
+type: Bug
+body:
+- type: textarea
+  id: current
+  attributes:
+    label: Current state
+    description: Where it is today, as it actually is.
+  validations:
+    required: true
+- type: textarea
+  id: wanted
+  attributes:
+    label: Wanted state
+    description: How it must work instead.
+  validations:
+    required: true
+- type: textarea
+  id: test
+  attributes:
+    label: Test
+    description: What shows it is fixed.
+  validations:
+    required: true
+- type: input
+  id: parent
+  attributes:
+    label: Parent
+    description: The item it breaks, as owner/repo#number. It is placed under it as a sub-issue.
+    placeholder: Anaphor-Labs/anaphor-lab#1
+  validations:
+    required: true
