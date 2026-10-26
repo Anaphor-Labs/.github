@@ -1,0 +1,33 @@
+name: Epic
+description: 'A big goal: a project''s goal, or a large part of one. Holds smaller epics or features.'
+type: Epic
+body:
+- type: textarea
+  id: current
+  attributes:
+    label: Current state
+    description: Where it is today, as it actually is.
+  validations:
+    required: true
+- type: textarea
+  id: wanted
+  attributes:
+    label: Wanted state
+    description: 'The goal reached, and who it is for: For [who], [what it does], so that [the value].'
+  validations:
+    required: true
+- type: textarea
+  id: test
+  attributes:
+    label: Test
+    description: The measurable outcome that shows the goal is reached.
+  validations:
+    required: true
+- type: input
+  id: parent
+  attributes:
+    label: Parent
+    description: The epic it belongs under, as owner/repo#number. Leave empty only for a project's own root epic.
+    placeholder: Anaphor-Labs/anaphor-lab#1
+  validations:
+    required: false

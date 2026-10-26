@@ -1,0 +1,33 @@
+name: Feature
+description: A capability that delivers part of an epic. Holds stories.
+type: Feature
+body:
+- type: textarea
+  id: current
+  attributes:
+    label: Current state
+    description: Where it is today, as it actually is.
+  validations:
+    required: true
+- type: textarea
+  id: wanted
+  attributes:
+    label: Wanted state
+    description: 'What the capability does, and the benefit: ..., so that ....'
+  validations:
+    required: true
+- type: textarea
+  id: test
+  attributes:
+    label: Test
+    description: The acceptance criteria that show the capability works.
+  validations:
+    required: true
+- type: input
+  id: parent
+  attributes:
+    label: Parent
+    description: The epic it belongs under, as owner/repo#number. It is placed under it as a sub-issue.
+    placeholder: Anaphor-Labs/anaphor-lab#1
+  validations:
+    required: true

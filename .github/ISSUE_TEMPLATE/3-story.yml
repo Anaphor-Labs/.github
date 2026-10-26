@@ -1,0 +1,33 @@
+name: Story
+description: Something a person can do once it works. Holds the tasks that build it.
+type: Story
+body:
+- type: textarea
+  id: current
+  attributes:
+    label: Current state
+    description: Where it is today, as it actually is.
+  validations:
+    required: true
+- type: textarea
+  id: wanted
+  attributes:
+    label: Wanted state
+    description: As [who], I want [what], so that [why].
+  validations:
+    required: true
+- type: textarea
+  id: test
+  attributes:
+    label: Test
+    description: Given [the situation], when [the action], then [the result].
+  validations:
+    required: true
+- type: input
+  id: parent
+  attributes:
+    label: Parent
+    description: The feature it belongs under, as owner/repo#number. It is placed under it as a sub-issue.
+    placeholder: Anaphor-Labs/anaphor-lab#1
+  validations:
+    required: true

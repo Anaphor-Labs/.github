@@ -1,0 +1,51 @@
+name: Task
+description: One piece of work that builds a story, in the repo the change belongs to.
+type: Task
+body:
+- type: textarea
+  id: current
+  attributes:
+    label: Current state
+    description: Where it is today, as it actually is.
+  validations:
+    required: true
+- type: textarea
+  id: wanted
+  attributes:
+    label: Wanted state
+    description: What this task changes, and the state it leaves the work in.
+  validations:
+    required: true
+- type: textarea
+  id: test
+  attributes:
+    label: Test
+    description: What proves this task works.
+  validations:
+    required: true
+- type: input
+  id: parent
+  attributes:
+    label: Parent
+    description: The story it builds, as owner/repo#number. It is placed under it as a sub-issue.
+    placeholder: Anaphor-Labs/anaphor-lab#1
+  validations:
+    required: true
+- type: dropdown
+  id: tier
+  attributes:
+    label: Tier
+    description: Which agents and compute do it, from moirai.toml.
+    options:
+    - A
+    - B
+    - C
+  validations:
+    required: true
+- type: input
+  id: waits_on
+  attributes:
+    label: Waits on
+    description: Tasks that must be finished first, as owner/repo#numbers.
+  validations:
+    required: false
